@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+    .icon{
+        @apply hidden xl:inline-flex p-2 h-10 w-10 
+        bg-purple-100 rounded-full cursor-pointer
+        shadow-sm highlight
+    }
+    .inspect{
+        @apply hover:scale-95
+    }
+    .enlarge{
+        @apply hover:scale-105
+    }
+    .highlight{
+        @apply inspect hover:text-blue-400 hover:bg-white hover:shadow-xl shadow-blue-300
+    }
+    
+    .headericon{
+        @apply justify-center h-5 group-hover:text-blue-400 text-center
+     text-gray-500 md:h-5
+    }
+    .catBackground{
+        @apply bg-[image:var(--image-url)]
+    }
+    .headerMiddleTab{
+        @apply flex space-x-6 rounded-full 
+    }
+    .headerleft{
+        @apply sm:space-x-7 flex items-center md:px-2
+    }
+    .headerright{
+        @apply 
+    }
+    .sidebar{
+        @apply pl-2 mt-5 max-w-[500px] xl:min-w-[300px] xl:w-5 flex-shrink px-2 text-center items-center
+    }
+
+    .sidebarwidget{
+        @apply 
+        text-center  flex flex-col md:flex-row my-3 bg-gray-100 rounded-full cursor-pointer enlarge shadow-lg shadow-blue-900 items-center
+    }
+    .sidebarwidgettext{
+     @apply ml-2 text-center hidden text-sm font-semibold md:inline-flex lg:ml-4 flex-shrink
+    }
+    .sidebarwidgeticon{
+        @apply text-center flex-col md:w-20 w-12 h-10 sm:w-24 sm:h-12
+    }
+    .welcome{
+    @apply h-screen bg-cover
+    }
+    .extra{
+        @apply focus:outline-none focus:ring focus:ring-violet-300
+    }
+    .topLinks{
+        @apply sticky top-0 flex items-start justify-between max-w-7xl mx-auto z-20
+    }
+    .anime{
+        @apply  transition duration-200 transform ease-in
+    }
+    .storycard{
+        @apply relative h-14 w-14 md:h-20 md:w-20 lg:h-56 lg:w-32 cursor-pointer overflow-x-auto p-3
+        anime
+    }
+    .firstSection{
+        @apply flex flex-grow h-screen pb-44 pt-6 mr-4 xl:mr-40 overflow-y-auto
+    }
+    .font-loader {
+      @apply font-family: 'Chilanka';
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@layer base {
+  html {
+    font-family: Proxima Nova, system-ui, sans-serif;
+  }
+  
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(114, 113, 113);
+  border-radius: 10px;
+  height: 200px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.category-btn:hover {
+  background-color: #FC1503 !important;
+  color: white !important;
+}
+
+.category-btn:hover span{
+  color: white !important;
+}
+
+.react-player {
+  height: 77vh !important;
+  width: 100% !important;
+}
+
+.search-bar{
+  border:none;
+  outline:none;
+  width:350px;
+}
+
+.category-btn{
+  font-weight: bold !important;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor:pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+
+  padding: 7px 15px;
+  margin: 10px 0px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 900px) {
+  .category-btn{
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width:800px){
+  .copyright{
+    display:none !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .scroll-horizontal {
+    overflow: auto !important;
+  }
+
+  .react-player {
+    height: 45vh !important;
+  }
+  .search-bar{
+    width:200px;
+  }
+}
+}
